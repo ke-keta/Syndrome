@@ -3,7 +3,7 @@ import { Fixed } from '../../components/Fixed/Fixed';
 import './Home.css';
 import { HomeContents } from '../../components/HomeContents/HomeContents';
 
-export const Home = ({i, finalFilteredStores, userLocation, searchResults, distance, setDistance, storeData, handleSearch, tagsName, setTagsName }) => {
+export const Home = ({setI,i, finalFilteredStores, userLocation, searchResults, distance, setDistance, storeData, handleSearch, tagsName, setTagsName }) => {
   const [fixedVisible, setFixedVisible] = useState(true);
 
   // スクロールイベントハンドラー

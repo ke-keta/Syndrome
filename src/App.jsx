@@ -117,7 +117,7 @@ function App() {
 
   return (
     <div className='app-content'>
-      <Router>
+      <Router basename="/Syndrome">
         <Routes>
           {/* 最初の表紙ページ（FrontCover） */}
           <Route path="/" element={<FrontCover />} />
@@ -135,6 +135,7 @@ function App() {
                   setTagsName={setTagsName}
                   userLocation={userLocation}
                   finalFilteredStores={finalFilteredStores}
+                  setI={setI}
                 />
                 <Home 
                   searchResults={searchResults} 

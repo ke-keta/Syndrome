@@ -47,7 +47,7 @@ const style = {
   p: 4,
 };
 
-export const Navi = ({ storeData,handleSearch,tagsName,setTagsName}) => {  
+export const Navi = ({ setI,i,storeData,handleSearch,tagsName,setTagsName}) => {  
 
   const [open, setOpen] = useState(false);
   const [distance, setDistance] = useState(0);

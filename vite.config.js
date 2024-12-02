@@ -2,7 +2,8 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
-export default defineConfig({
+export default defineConfig(({ mode }) =>({
+  base: mode === 'production' ? '/Syndrome/' : '/',  // ここにリポジトリ名を入力（例：'/my-app/'）
   plugins: [
     react(),
     VitePWA({
@@ -14,31 +15,30 @@ export default defineConfig({
         theme_color: '#000000',
         icons: [
           {
-            src: '/android-02192.png', 
+            src: '/Syndrome/android-02192.png',  // 修正後のパス
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/android-02512.png', 
+            src: '/Syndrome/android-02512.png',  // 修正後のパス
             sizes: '512x512',
             type: 'image/png',
           },
         ],
+        
         screenshots: [
           {
-            src: '/screenshot03.png',  // public内の画像
+            src: 'screenshot03.png',
             sizes: '1280x720',
             type: 'image/png',
-            form_factor: 'wide', 
           },
           {
-            src: '/screenshot03.png',  // public内の画像
+            src: 'screenshot03.png',
             sizes: '1280x720',
             type: 'image/png',
-            form_factor: 'any',  // 'wide'以外
           },
         ],
       },
     }),
   ],
-});
+}));
