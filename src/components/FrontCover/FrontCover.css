@@ -1,0 +1,224 @@
+.cover-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 80px;
+  font-family: 'Dancing Script', sans-serif;
+  font-size: clamp(5.6rem, 6vw, 6rem); /* 画面サイズに応じて調整 */
+  font-weight: bold;
+  background: linear-gradient(to right, #f99150, #b2fdf3); /* グラデーション */
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: opacity 4s ease-out;
+  z-index: 3;
+}
+
+@media screen and (max-width: 768px) {
+  .cover-title {
+    font-size: clamp(4.5rem, 8vw, 4rem); /* モバイル用のサイズ調整 */
+    margin-top: 70px; /* スペースの調整 */
+  }
+}
+
+.cover-title.show {
+  opacity: 1;
+}
+
+/* .image-container {
+position: relative;
+width: 300px;
+height: 300px;
+margin: 0 auto;
+}   */
+
+.frontMain {
+background-image: url('../../images/BlackSilk.png'); /* 背景画像を適用 */
+background-size: cover; /* 画面全体にフィットさせる */
+background-position: center; /* 中央揃え */
+background-repeat: no-repeat; /* 繰り返しなし */
+width: 100vw; /* 幅を全画面に */
+flex-direction: column; /* コンテンツを縦方向に整列 */
+
+background-color: #000000;
+position: relative; /* 子要素のポジショニング基準を設定 */
+overflow: hidden;
+height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .frontMain {
+    background-position: top center;
+  }
+}
+
+.cover-page {
+  position: absolute;
+  width: 100%;
+  background-position: center; /* 画像の位置を中央に */
+  background-repeat: no-repeat; /* 画像の繰り返しを防止 */
+  height: 100vh; /* 画面全体の高さを背景画像に合わせる */
+  background-size:contain;
+  margin-top: -220px;
+  z-index: 4;
+
+  opacity: 0; /* 初期状態で非表示 */
+  transform: translateY(20px); /* 下に少しオフセット */
+  transition: opacity 0.8s ease, transform 1s ease; /* トランジション */
+}
+
+.cover-page2 {
+  position: absolute;
+  width: 100%;
+  background-position: center; /* 画像の位置を中央に */
+  background-repeat: no-repeat; /* 画像の繰り返しを防止 */
+  height: 100vh; /* 画面全体の高さを背景画像に合わせる */
+  background-size:contain;
+  margin-top: -185px;
+  margin-left: -20px;
+  background-size: 630px;
+  z-index: 2;
+  animation: rotateImage 10s infinite linear; /* 5秒で1回転、無限ループ */
+
+  opacity: 0; /* 初期状態で非表示 */
+  transform: translateY(20px); /* 下に少しオフセット */
+  transition: opacity 0.8s ease, transform 0.1s ease; /* トランジション */
+}
+
+.cover-page.show,
+.cover-page2.show {
+  opacity: 1; /* フェードイン */
+  transform: translateY(0); /* 元の位置に戻る */
+}
+
+@media screen and (max-width: 768px) {
+  .cover-page {
+    margin-top: 1%; /* モバイル用に画像位置を調整 */
+    background-size: cover; /* モバイルでは画像が画面にフィット */
+    height: 50vh; /* 画像の高さを調整 */
+  }
+  .cover-page2{
+    margin-top: 5%; /* モバイル用に画像位置を調整 */
+    margin-left: 1%;
+    background-size: 550px 550px; /* モバイルでは画像が画面にフィット */
+    height: 50vh; /* 画像の高さを調整 */
+  }
+}
+
+.meow-text {
+  position: absolute;
+  font-family: 'hachi-maru-pop', sans-serif; /* フォントの指定 */
+  font-size: 1.8rem; /* サイズを少し大きく */
+  font-weight: bold;
+  color: #000000; /* 文字色 */
+  padding: 6px 12px; /* 内側の余白を広く */
+  border-radius: 50px; /* 丸みを強調 */
+  text-transform: uppercase; /* 文字を大文字に */
+  letter-spacing: 1px; /* 文字間隔を少し広げる */
+  background: #ffffff; /* グラデーション背景 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* シャドウで浮き出る感じ */
+  animation: fadeInOut 4s linear infinite; /* アニメーションで消える・現れる */
+  z-index: 3; /* 優先順位 */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); 
+}
+
+/* @keyframes fadeInOut {
+0% {
+  opacity: 0; 
+}
+10% {
+  opacity: 1; 
+}
+90% {
+  opacity: 1; 
+}
+100% {
+  opacity: 0; 
+}
+} */
+
+/* @keyframes rotateImage {
+  0% {
+      transform: rotate(-50deg); 
+  }
+  25% {
+      transform: rotate(-140deg);
+  }
+  50% {
+      transform: rotate(-60deg); 
+  }
+  75% {
+      transform: rotate(-140deg);
+  }
+  100% {
+      transform: rotate(-50deg); 
+  }
+} */
+
+
+
+.cover-buttons {
+  display: flex;
+  flex-direction: column; /* ボタンを縦並びに変更 */
+  align-items: center;    /* ボタンを中央揃え */
+  gap: 90px;              /* ボタン間のスペース */
+  height: 30vh;
+  margin-top: 130px;
+  position: relative; /* ボタンを上に表示 */
+  z-index: 100; /* ボタンを最前面に表示 */
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+.cover-buttons.show {
+  opacity: 1;
+}
+
+.cover-btn1 {
+  margin-left: 50;
+  padding: 20px 90px;
+  font-size: 2rem;
+  background: linear-gradient(to right, #f99150, #fcfdb2); /* グラデーション */
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 80px;
+  transition: color 0.3s ease; /* スムーズな背景変更 */
+
+}
+
+.cover-btn2 {
+  margin-left: 50;
+  padding: 20px 55px;
+  font-size: 2rem;
+  background: linear-gradient(to right, #f99150, #fffb8b); /* グラデーション */
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 80px;
+  transition: 0.3s;
+}
+
+.cover-btn1:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.cover-btn2:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 18px) {
+  .cover-buttons {
+    gap: 20%; /* モバイルではボタン間のスペースを小さく */
+    margin-top: 40%;
+  }
+
+  .cover-btn1 {
+    padding: 15px 60px; /* ボタンのパディングを調整 */
+    font-size: 1.5rem; /* フォントサイズを調整 */
+  }
+  .cover-btn2 {
+    padding: 15px 36px; /* ボタンのパディングを調整 */
+    font-size: 1.5rem; /* フォントサイズを調整 */
+  }
+}

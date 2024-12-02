@@ -1,0 +1,25 @@
+.home-back {
+    background-image: url('../../images/BlackTile.jpeg'); /* 背景画像を適用 */
+    /* background-size: cover;  */
+    background-position:center; 
+    /* background-repeat: no-repeat; */
+    width: 100vw; 
+    /* background-size: 500px; */
+}
+
+.home-content {
+    margin-top: 60px;
+    color: white;
+    display: flex;
+    justify-content: left;
+}
+
+.fixed-hidden {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.fixed-visible {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}

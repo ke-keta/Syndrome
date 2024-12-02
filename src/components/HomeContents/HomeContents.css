@@ -1,0 +1,57 @@
+.home-contents-detail {
+    position: relative; /* 相対位置を指定 */
+    width: 100%; /* 必要に応じて設定 */
+    height: auto; /* 高さを自動調整 */
+    display: flex;
+    flex-direction: column; /* 縦方向に並べる */
+    align-items: center; /* 中央揃え */
+    justify-content: flex-start; /* 上から並べる */
+    margin: 0; /* マージンをリセット */
+    padding: 0; /* パディングをリセット */
+    box-sizing: border-box; /* ボックスモデルの設定 */
+    margin-top: 40px;
+}
+
+.homeContentTitle{
+    width:360px;
+    color: white;
+    font-size: 30px;
+    font-family: "Zen Antique Soft", serif;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 20px;
+    /* background-color: rgb(4, 1, 1); */
+    border-radius: 10px;
+    padding: 6px 15px;
+    text-align: center; /* テキストも中央揃え */
+}
+
+.totalStore {
+    width:360px;
+    color: white;
+    font-size: 30px;
+    font-family: "Zen Antique Soft", serif;
+    font-weight: bold;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    /* background-color: rgb(4, 1, 1); */
+    border-radius: 10px;
+    padding: 6px 15px;
+    text-align: center; /* テキストも中央揃え */
+}
+
+.storeDetail-content {
+    width: 100%; /* 必要に応じて設定 */
+}
+
+.top-div {
+    width: 100%; /* 画面幅に合わせる */
+    /* background-color: rgb(229, 187, 187); */
+}
+
+.bottom-div {
+    height: 30px; /* 必要に応じて設定 */
+    width: 100%; /* 画面幅に合わせる */
+    /* background-color: lightgray; デバッグ用に色を追加 */
+}

@@ -1,0 +1,26 @@
+.loginContents {
+    background-image: url('../../images/BlackSmoke.jpg'); /* 背景画像を適用 */
+    background-size: cover; /* 画面全体にフィットさせる */
+    background-position: center; /* 中央揃え */
+    background-repeat: no-repeat; /* 繰り返しなし */
+    width: 100vw; 
+    position: relative; /* 子要素のポジショニング基準を設定 */
+    overflow: hidden;
+    height: 100vh;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    margin-top: 80px;
+    font-family: 'Dancing Script', sans-serif;
+    background-color: white;
+    width: 70%;
+    height: 40%;
+    padding: -50px;
+    margin-left: 100px;
+}
